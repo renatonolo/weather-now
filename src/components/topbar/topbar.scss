@@ -1,0 +1,16 @@
+@import '../../variables.scss';
+
+.wn_topbar {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: $topbar-height-desktop;
+    background-color: $topbar-bg-color;
+
+    > img {
+        width: 165px;
+    }
+}

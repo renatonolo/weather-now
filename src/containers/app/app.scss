@@ -1,0 +1,21 @@
+@import "../../variables.scss";
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica,', 'Arial';
+}
+
+body {
+    position: relative;
+    background-color: $app-bg-color;
+}
+
+.wn_app {
+    position: relative;
+
+    > main {
+        margin-top: $topbar-height-desktop;
+    }
+}
+
