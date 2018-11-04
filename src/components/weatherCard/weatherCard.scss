@@ -1,0 +1,71 @@
+@import '../../variables.scss';
+
+.wn_card {
+    position: relative;
+    background-color: $card-bg-color;
+    max-width: 250px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 8px -1px rgba(0,0,0,0.2);
+
+    > .header {
+        text-align: center;
+        padding: 10px 0;
+        border-bottom: 1px solid $divider-color;
+    }
+
+    > .temperature {
+        font-size: 64px;
+        text-align: center;
+        padding: 32px 0;
+
+        &--blue {
+            color: $blue-color;
+        }
+
+        &--orange {
+            color: $orange-color;
+        }
+
+        &--red {
+            color: $red-color;
+        }
+    }
+
+    > .details {
+        background-color: $card-footer-bg-color;
+        padding: 16px 32px;
+
+        > .humidityPressure {
+            display: flex;
+            padding-bottom: 16px;
+
+            > .humidity,
+            > .pressure {
+                > p {
+                    text-align: center;
+                    opacity: 1;
+
+                    &:first-of-type {
+                        font-size: 11px;
+                        text-transform: uppercase;
+                        opacity: .5;
+                    }
+
+                    > span {
+                        font-size: 11px;
+                    }
+                }
+            }
+
+            > .pressure {
+                margin-left: auto;
+            }
+        }
+
+        > .lastUpdate {
+            font-size: 9px;
+            text-align: center;
+            opacity: .5;
+        }
+    }
+}
