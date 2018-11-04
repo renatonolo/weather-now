@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-import './topbar.scss'
+import './topbar.scss';
 
 const Topbar = () => {
     return (
@@ -10,4 +10,4 @@ const Topbar = () => {
     )
 }
 
-export default Topbar
+export default Topbar;

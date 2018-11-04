@@ -9,6 +9,7 @@
     width: 100vw;
     height: $topbar-height-desktop;
     background-color: $topbar-bg-color;
+    z-index: 1;
 
     > img {
         width: 165px;

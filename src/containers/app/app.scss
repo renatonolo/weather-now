@@ -1,14 +1,32 @@
 @import "../../variables.scss";
 
-html, body {
+* {
     margin: 0;
     padding: 0;
+    z-index: 0;
+    box-sizing: border-box;
+}
+
+html, body {
     font-family: 'Helvetica,', 'Arial';
+    color: $primary-text-color;
+    
+    //Smartphones
+    @media screen and (max-width: 767px) {
+        overflow-x: hidden;
+    }
 }
 
 body {
     position: relative;
     background-color: $app-bg-color;
+
+    > #root {
+        //Smartphones
+        @media screen and (max-width: 767px) {
+            height: fit-content;
+        }
+    }
 }
 
 .wn_app {
@@ -16,6 +34,33 @@ body {
 
     > main {
         margin-top: $topbar-height-desktop;
+        height: 100%;
+        padding: 0 200px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        //Smartphones
+        @media screen and (max-width: 767px) {
+            flex-direction: column;
+            padding: 40px;
+
+            > .wn_card {
+                &:nth-child(1) {
+                    order: 2;
+                    margin-top: 40px;
+                }
+
+                &:nth-child(2) {
+                    order: 1;
+                }
+
+                &:nth-child(3) {
+                    order: 3;
+                    margin-top: 40px;
+                }
+            }
+        }
     }
 }
 
