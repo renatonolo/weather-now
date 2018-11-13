@@ -1,4 +1,5 @@
 const { resolve, join } = require("path")
+const webpack = require('webpack')
 
 module.exports = {
     mode: "development",
@@ -37,5 +38,14 @@ module.exports = {
     stats: {
         colors: true,
         reasons: true
-    }
+    },
+    plugins: [
+        new webpack.DefinePlugin({
+            WEATHER_API: {
+                URL: JSON.stringify('https://api.openweathermap.org/data/2.5/weather'),
+                KEY: JSON.stringify('551b54a7e304f6cca2c11e47b71257bd')
+            },
+            CACHE_EXPIRATION_MS: (1000 * 60 * 10)
+        })
+    ]
 }
