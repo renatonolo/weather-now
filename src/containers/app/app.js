@@ -6,9 +6,6 @@ import Topbar from '../../components/topbar';
 import WeatherCard from '../../components/weatherCard';
 
 import { weatherApiActions } from '../../actions/weatherApiActions';
-import {
-    CACHE_EXPIRATION_MS
-} from '../../constants';
 
 import './app.scss'
 

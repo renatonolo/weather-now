@@ -1,9 +1,4 @@
 import moment from 'moment';
-import {
-    WEATHER_API_URL,
-    WEATHER_API_KEY,
-    CACHE_EXPIRATION_MS
-} from '../constants';
 
 export default class WeatherApiServices {
     constructor() {
@@ -11,7 +6,7 @@ export default class WeatherApiServices {
     }
 
     async getInformationsByCityName(cityName, countryName) {
-        let url = `${WEATHER_API_URL}?q=${cityName},${countryName}&units=metric&APPID=${WEATHER_API_KEY}`;
+        let url = `${WEATHER_API.URL}?q=${cityName},${countryName}&units=metric&APPID=${WEATHER_API.KEY}`;
         let response = {};
         
         try {
